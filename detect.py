@@ -126,7 +126,7 @@ def detect(save_img=False):
 
                     if save_img or view_img:  # Add bbox to image
                         label = ''
-                        #plot_one_box(xyxy, im0, label='', color=colors[int(cls)], line_thickness=1)
+                        plot_one_box(xyxy, im0, label='', color=colors[int(cls)], line_thickness=1)
 
             # Print time (inference + NMS)
             print(f'{s}Done. ({(1E3 * (t2 - t1)):.1f}ms) Inference, ({(1E3 * (t3 - t2)):.1f}ms) NMS')
@@ -158,7 +158,7 @@ def detect(save_img=False):
 
     if save_txt or save_img:
         s = f"\n{len(list(save_dir.glob('labels/*.txt')))} labels saved to {save_dir / 'labels'}" if save_txt else ''
-        #print(f"Results saved to {save_dir}{s}")
+        print(f"Results saved to {save_dir}{s}")
 
     print(f'Done. ({time.time() - t0:.3f}s)')
 
